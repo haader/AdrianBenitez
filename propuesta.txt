@@ -1,0 +1,31 @@
+Se busca programadores java/J2EE
+buscamos desarrolladores de backend con experiencia minima de 3 años y amplio conocimiento de desarrolo en java/J2EE deseable spring frameworks (spring, spring mvc,spring boot,spring security)
+adicionalmente debe tener experiencia en
+1. arquitectura de microservicios
+2. REST APIs
+3. Kubernetes
+4. SQL-server
+5. Maven
+CONOCIMIENTO EN CLOUD:
+1. ELK Stack (elastic search- Logstash- Kibana)
+2. Azure cloud - API Management
+3. API security
+4. Traffic Mediation (SOAP, REST)
+5. API discovery
+- Amplio conocimiento de los entornos de codigo abierto
+- Habilidades en el desarollo dee aplicaciones y experiencia en programacion
+- Experiencia empleando buenas practicas de programacion y codificacion
+- Experiencia en construccion de servicios web
+REQUERIMIENTOS
+* Conocimientos de ingles b2 en adelante.
+* Estar siempre dispuestos a ayudar a sus compañeros de equipo y compartir conocimiento.
+* Excelente habilidades de comunicacion verbal, escrita y oral.
+* Ser capaz de comunicar ideas y diseños de software-
+* Fuerte orientacion al logro
+* Amplio deseo de aprender continuamente
+* Autodidacta
+* Gran capacidad de investigacion y desarollo.
+Skill
+*JavaSpring boot and others development skills
+enviar cv a matcortez07@gmail.com
+aca esta mas completo los requerimientos !! si pueden compartir muchas gracias !!
