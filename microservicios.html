@@ -1,0 +1,47 @@
+<h3>Arquitectura de microservicios</h3>
+<br>
+<p>
+
+    aplicamos el <strong> principio de separación de
+    responsabilidades (separation of concerns)</strong>
+     que consiste en asegurarse que cada clase, componente, etc. tenga una
+    responsabilidad bien definida, es decir, que sus funcionalidades o métodos no hagan más de un tipo de actividad, por
+    ejemplo, dibujar la página web y guardar datos en una base datos.
+</p>
+<br>
+<p>La separación de responsabilidades se aplica en diferentes formas y niveles. En este caso la usaremos para separar
+    tres responsabilidades bien definidas:</p>
+
+    <img src="./img/diagrama_logico.png" alt="">
+
+    <ol>
+        <li>Interactuar con el cliente del servicio (capa interfaz o presentación). Aquí agrupamos las clases y métodos que conforman el <strong>API</strong> del servicio web.</li>
+        <li>Ejecutar procesamientos y aplicar reglas de negocio. Estas son clases que tienen la «sabiduría» o conocimiento sobre la lógica de lo que hace el servicio web. Algunos llaman a estas clases, «<strong>servicios</strong>«</li>
+        <li>Acceso a datos. Son las clases que se encargan de almacenar y extraer la información de un repositorio. Algunos las llaman <em>Repository</em> o <em>Data Access Object</em> (<strong>DAO</strong>)</li>
+        </ol>
+
+        <p>Adicionalmente tenemos un tipo de objeto que transporta la información entre estas capas de nuestra aplicación, para
+            reducir el acoplamiento. Son los llamados <em>Data Transport Object (<strong>DTO</strong>) o Value Object
+                (<strong>VO</strong>)</em> que se implementan como objetos planos de java<em> (Plain Old Java Object o
+                <strong>POJO</strong>)</em>, es decir, simples contenedores de datos, sin métodos o comportamiento.</p>
+
+                <p>Un tipo de objeto muy parecido a los DTO son las entidades (<strong>entity</strong>) que representan tablas o
+                    registros en la base de datos. La mejor práctica es extraer un entity de la base de datos y asignar algunos de sus
+                    valores a un DTO equivalente para retornarlo a la capa superior en lugar de retornar el entity. Es una práctica
+                    discutible porque por ser tan parecidas las entities con los DTO, el código parecerá duplicado; en su favor
+                    argumentamos que evita que el cliente reciba información muy detallada de la base de datos o campos que no queremos
+                    que reciba (ej: hash del password), reduciendo así el acoplamiento y mejorando la abstracción.</p>
+
+
+
+                    <h2><span id="Creando_el_proyecto">Creando el proyecto</span></h2>
+<p>Usaremos un proyecto Maven que es genérico y puede usarse en eclipse, Netbeans, IntelliJ IDEA o cualquier otro IDE Java, incluso con editores de texto de línea de comandos. Tenemos por lo menos tres formas de crear el proyecto:</p>
+<ol>
+<li>Usando el sitio web de <a href="https://start.spring.io/" target="_blank" rel="noopener">Spring Boot Initializr</a>, en el cual podremos seleccionar los parámetros del proyecto, las librerías a incluir y descargar un zip que contiene nuestro proyecto base, el cual debemos importar en nuestro IDE favorito</li>
+</ol>
+
+<p>En la siguiente ventana selecciona las librerías Web (clases para páginas y servicios web), JPA (Hibernate y otras
+    librerías para acceder a la base de datos) y H2 (base de datos en memoria para facilitar el desarrollo y pruebas).
+    Presiona el botón «Finish» para completar la generación del proyecto:
+
+</p>
